@@ -1,18 +1,10 @@
+// Creates a module within the global scope to control angular app
 var helloApp = angular.module('helloApp', []);
 
-// function greetingController(name) {
-// 	if (!name) {
-// 		return "World";
-// 	} else {
-// 		var lowName = name.toString().toLowerCase();
-// 		return lowName.charAt(0).toUpperCase() + lowName.slice(1);
-// 	}
-// }	
-
-// function greetingController($scope) {
-// 	//$scope.name = "World";
-// }
-
+// Creates controller named greetingController
+// Within the DOM tag scope, in this case <body>, this controller
+// and its attributes exist.
+// The function initially has Hello World and changes depending on input
 helloApp.controller('greetingController', ['$scope', function($scope) {
 	$scope.name = "World";
 
